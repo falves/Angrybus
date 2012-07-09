@@ -73,8 +73,9 @@
 -(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
     
     RotaViewController * proximo = (RotaViewController*) segue.destinationViewController;
-    proximo.rotas = self.dataSourceRotas;
-    proximo.pontos = self.dataSourcePontos;
+//    proximo.rotas = self.dataSourceRotas;
+    NSIndexPath * indexPath = (NSIndexPath*)sender;
+    proximo.pontos = [self.dataSourcePontos objectAtIndex:indexPath.section];
     proximo.numeroLinha = self.numeroLinha;
 }
 
@@ -82,39 +83,84 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"pontoCell"];
+    if (indexPath.row != [[self.dataSourcePontos objectAtIndex:indexPath.section] count]) {
+        
+        
+        
+        CustomCell * cell = (CustomCell*) [tableView dequeueReusableCellWithIdentifier:@"pontoCell"];
+        
+        NSDictionary * ponto = [[self.dataSourcePontos objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
+        
+        //    NSString * ordem = [NSString stringWithFormat:@"%d", [[ponto objectForKey:@"ordem"] intValue]];
+        //    NSString * lat = [NSString stringWithFormat:@"%f", [[ponto objectForKey:@"lat"] doubleValue]];
+        
+        
+        cell.title.text = [ponto objectForKey:@"endereco"];
+        cell.title.font = [UIFont fontWithName:@"MuseoSans-300" size:17];
+        cell.title.textColor = AZUL;
+        
+        return cell;
+    } else {
+        UITableViewCell * cell = [UITableViewCell new];
+        UIImageView * backGround = [UIImageView new];
+        backGround.frame = CGRectMake(0, 0, 320, 43);
+        backGround.image = [UIImage imageNamed:@"verposicao"];
+        [cell addSubview:backGround];
+        
+//        UIButton * button = 
+        
+        return cell;
+    }
     
-    NSDictionary * ponto = [[self.dataSourcePontos objectAtIndex:indexPath.section] objectAtIndex:indexPath.row];
-//    NSLog(@"%@",ponto);
-    
-    NSString * ordem = [NSString stringWithFormat:@"%d", [[ponto objectForKey:@"ordem"] intValue]];
-//    NSString * lat = [NSString stringWithFormat:@"%f", [[ponto objectForKey:@"lat"] doubleValue]];
-
-    
-    cell.textLabel.text = [ponto objectForKey:@"endereco"];
-    cell.detailTextLabel.text = ordem;
-    // ALTERAR PARA O DETAILLABEL CERTA
-    
-    return cell;
 }
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    
+    if (indexPath.row == [[self.dataSourcePontos objectAtIndex:indexPath.section] count]) {
+        [self performSegueWithIdentifier:@"Rota" sender:indexPath];
+    }
 //    [self performSegueWithIdentifier:@"DetalhesLinha" sender:[self.datasource objectAtIndex:indexPath.row]];
 }
 
 #pragma mark UITableViewDataSource
 
 -(NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return [[self.dataSourcePontos objectAtIndex:section] count];
+    return [[self.dataSourcePontos objectAtIndex:section] count]+1;
 }
 
 -(NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
     return [self.dataSourceRotas count];
 }
 
-- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
-    return [self.dataSourceRotas objectAtIndex:section];
+//- (NSString *)tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+//    return [self.dataSourceRotas objectAtIndex:section];
+//}
+
+- (UIView*) tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section {
+    
+    UIView * view = [UIView new];
+    view.frame = CGRectMake(0, 0, 320, 25);
+    
+    UILabel * label = [UILabel new];
+    label.frame = CGRectMake(20, 2, 280, 21);
+    label.font = [UIFont fontWithName:@"MuseoSans-700" size:18];
+    label.textColor = CINZA;
+    label.text = [self.dataSourceRotas objectAtIndex:section];
+    label.backgroundColor = [UIColor clearColor];
+    
+    UIImageView * imageView = [UIImageView new];
+    imageView.frame = view.frame;
+    imageView.image = [UIImage imageNamed:@"header"];
+
+    [view addSubview:imageView];
+    [view addSubview:label];
+    
+    return view;
+}
+
+-(float)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section {
+    return 25.0;
 }
 
 #pragma mark - Getters/Setters

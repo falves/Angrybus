@@ -71,8 +71,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"linhaCell"];
-    cell.textLabel.text = [self.datasource objectAtIndex:indexPath.row];
+    CustomCell * cell = (CustomCell*)[tableView dequeueReusableCellWithIdentifier:@"linhaCell"];
+    cell.title.text = [self.datasource objectAtIndex:indexPath.row];
+    cell.title.font = [UIFont fontWithName:@"MuseoSans-300" size:17];
+    cell.title.textColor = AZUL;
     return cell;
 }
 

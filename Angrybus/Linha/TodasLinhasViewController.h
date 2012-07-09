@@ -8,6 +8,7 @@
 
 #import <UIKit/UIKit.h>
 #import "DetalhesLinhaViewController.h"
+#import "CustomCell.h"
 
 @interface TodasLinhasViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {

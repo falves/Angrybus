@@ -22,6 +22,16 @@
     [TestFlight setDeviceIdentifier:[[UIDevice currentDevice] uniqueIdentifier]];
 #endif
     
+    [[UINavigationBar appearance] setBackgroundImage:[UIImage imageNamed:@"navbar"] forBarMetrics:UIBarMetricsDefault];
+    [[UINavigationBar appearance] setTintColor:[UIColor colorWithRed:20.0/255.0 green:25.0/255.0 blue:30.0/255.0 alpha:0.4]];
+    [[UINavigationBar appearance] setTitleTextAttributes:
+     [NSDictionary dictionaryWithObjectsAndKeys:
+      [UIColor colorWithRed:255.0/255.0 green:255.0/255.0 blue:255.0/255.0 alpha:1.0], UITextAttributeTextColor, 
+      [UIColor colorWithRed:45.0/255.0 green:55.0/255.0 blue:60.0/255.0 alpha:0.8],UITextAttributeTextShadowColor, 
+      [NSValue valueWithUIOffset:UIOffsetMake(0, -1)],UITextAttributeTextShadowOffset, 
+      [UIFont fontWithName:@"MuseoSans-900" size:20.0],UITextAttributeFont, nil]];
+    
+    
     return YES;
 }
 							

@@ -27,14 +27,25 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:YES];
+//    [self.navigationController setNavigationBarHidden:YES];
+    self.title = @"AngryBus";
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    self.title = @"Voltar";
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
     
-    self.title = @"Mapa";
+    MKUserTrackingBarButtonItem *findMe = [[MKUserTrackingBarButtonItem alloc] initWithMapView:mapViewCentral];
+    self.navigationItem.leftBarButtonItem = findMe;
+    
+    
+    self.primeiraLocalizacao = YES;
+    
+//    self.title = @"AngryBus";
 	
     NSString * requestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaPontos",SERVIDOR];
     NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestString]];
@@ -107,8 +118,8 @@
     
     if (!pinView) {
         pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinView"];
-        pinView.image = [UIImage imageNamed:@"blue_pin"];
-        pinView.frame = CGRectMake(0, 0, 15, 15); 
+        pinView.image = [UIImage imageNamed:@"poi"];
+        pinView.frame = CGRectMake(0, 0, 15, 35); 
         //pinView.animatesDrop = YES; can't animate with custom pin images
         pinView.canShowCallout = NO;
         

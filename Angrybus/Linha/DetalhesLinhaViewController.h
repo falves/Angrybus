@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "CustomCell.h"
 #import "RotaViewController.h"
 
 @interface DetalhesLinhaViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>

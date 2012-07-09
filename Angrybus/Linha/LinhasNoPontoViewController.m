@@ -27,13 +27,19 @@
 }
 
 - (void)viewWillAppear:(BOOL)animated {
-    [self.navigationController setNavigationBarHidden:NO];
+//    [self.navigationController setNavigationBarHidden:NO];
+    self.title = @"Linhas no ponto";
+    
+}
+
+- (void) viewWillDisappear:(BOOL)animated {
+    self.title = @"Voltar";
 }
 
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.title = @"Linhas no ponto";
+    
     
     NSString * requestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaLinhasNoPonto?idponto=%@",SERVIDOR,self.idPonto];
     NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestString]];
@@ -78,8 +84,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell * cell = [tableView dequeueReusableCellWithIdentifier:@"linhaCell"];
-    cell.textLabel.text = [self.datasource objectAtIndex:indexPath.row];
+    CustomCell * cell = (CustomCell*) [tableView dequeueReusableCellWithIdentifier:@"linhaCell"];
+    cell.title.text = [self.datasource objectAtIndex:indexPath.row];
+    cell.title.font = [UIFont fontWithName:@"MuseoSans-300" size:17];
+    cell.title.textColor = AZUL;
     return cell;
 }
 

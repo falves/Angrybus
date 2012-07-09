@@ -45,7 +45,7 @@
 -(void) loadRoute
 {
     
-    NSArray * waypoints = [self.pontos objectAtIndex:0];
+    NSArray * waypoints = self.pontos; //[self.pontos objectAtIndex:0];
     
     NSMutableArray * pontos = [NSMutableArray new];
     
@@ -308,7 +308,7 @@
         pinView.canShowCallout = NO;
 
         if ([annotation isKindOfClass:[PlaceMark class]]) {
-            pinView.image = [UIImage imageNamed:@"blue_pin"];
+            pinView.image = [UIImage imageNamed:@"poi"];
         } else {
             pinView.image = [UIImage imageNamed:@"green_pin"];
         }
