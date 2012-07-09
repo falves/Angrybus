@@ -118,8 +118,8 @@
     
     if (!pinView) {
         pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinView"];
-        pinView.image = [UIImage imageNamed:@"poi"];
-        pinView.frame = CGRectMake(0, 0, 15, 35); 
+        pinView.image = [UIImage imageNamed:@"ponto"];
+        pinView.frame = CGRectMake(0, 0, 20, 60);
         //pinView.animatesDrop = YES; can't animate with custom pin images
         pinView.canShowCallout = NO;
         

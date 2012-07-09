@@ -12,7 +12,7 @@
     #import "TestFlight.h"
     #define AZUL [UIColor colorWithRed:80.0/255.0 green:107.0/255.0 blue:129.0/255.0 alpha:1.0]
     #define CINZA [UIColor colorWithRed:235.0/255.0 green:235.0/255.0 blue:235.0/255.0 alpha:1.0]
-    #define NSLog(__FORMAT__, ...) TFLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
+//    #define NSLog(__FORMAT__, ...) TFLog((@"%s [Line %d] " __FORMAT__), __PRETTY_FUNCTION__, __LINE__, ##__VA_ARGS__)
     #import <UIKit/UIKit.h>
     #import <Foundation/Foundation.h>
     #define SERVIDOR @"http://angrybus.bolzani.eti.br"

@@ -304,14 +304,18 @@
     if (!pinView) {
         
         pinView = [[MKAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:@"pinView"];
-        pinView.frame = CGRectMake(0, 0, 15, 15); 
+        
         pinView.canShowCallout = NO;
 
         if ([annotation isKindOfClass:[PlaceMark class]]) {
-            pinView.image = [UIImage imageNamed:@"poi"];
+            pinView.image = [UIImage imageNamed:@"ponto"];
+            pinView.frame = CGRectMake(0, 0, 20, 60);
+            
         } else {
-            pinView.image = [UIImage imageNamed:@"green_pin"];
+            pinView.image = [UIImage imageNamed:@"onibus"];
+            pinView.frame = CGRectMake(0, 0, 17, 20);
         }
+         
      
     } else {
         pinView.annotation = annotation;

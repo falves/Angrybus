@@ -79,6 +79,8 @@
     proximo.numeroLinha = self.numeroLinha;
 }
 
+//- (void) clicou
+
 #pragma mark UITableViewDelegate
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
@@ -104,10 +106,29 @@
         UITableViewCell * cell = [UITableViewCell new];
         UIImageView * backGround = [UIImageView new];
         backGround.frame = CGRectMake(0, 0, 320, 43);
-        backGround.image = [UIImage imageNamed:@"verposicao"];
+        backGround.image = [UIImage imageNamed:@"celula"];
         [cell addSubview:backGround];
         
-//        UIButton * button = 
+        UIImage * imagem = [UIImage imageNamed:@"btnverposicao"];
+        
+        UIImageView * imageViewBotao = [UIImageView new];
+        imageViewBotao.frame = CGRectMake(60, 6, 200, 32);
+        
+        [imageViewBotao setImage:imagem];
+        
+        [cell setSelectionStyle:UITableViewCellSelectionStyleNone];
+        
+        [cell addSubview:imageViewBotao];
+        
+//        UIButton * button = [UIButton buttonWithType:UIButtonTypeCustom];
+//        button.frame = CGRectMake(0, 0, 0, 0);
+//        [button setBackgroundImage:imagem forState:UIControlStateNormal];
+//        [button setBackgroundImage:imagem forState:UIControlStateSelected];
+//        [button setTag:indexPath.section];
+//        
+//        [cell addSubview:button];
+//        
+//        [button addTarget:self action:@selector(clicouBotao:)forControlEvents:UIControlEventTouchUpInside];
         
         return cell;
     }
