@@ -21,7 +21,7 @@
 @synthesize routeLineView = _routeLineView;
 @synthesize rotas = _rotas;
 @synthesize pontos = _pontos;
-@synthesize numeroLinha = _numeroLinha;
+@synthesize numeroRota = _numeroRota;
 
 
 
@@ -265,7 +265,7 @@
 
 - (void) posicionaVeiculos {
     
-    NSString * rotasRequestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaPosicoesDaLinha?linha=%@",SERVIDOR,self.numeroLinha];
+    NSString * rotasRequestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaPosicoesDaRota?idrota=%@",SERVIDOR,self.numeroRota];
     NSURLRequest * rotasRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:rotasRequestString]];
     NSError * erro;
     NSURLResponse * response;

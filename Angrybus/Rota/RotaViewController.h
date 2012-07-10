@@ -26,7 +26,7 @@
 @property (nonatomic,strong) MKPolylineView* routeLineView;
 @property (nonatomic, strong) NSArray * rotas;
 @property (nonatomic, strong) NSArray * pontos;
-@property (nonatomic, strong) NSString * numeroLinha;
+@property (nonatomic, strong) NSString * numeroRota;
 
 // load the points of the route from the data source, in this case
 // a CSV file. 

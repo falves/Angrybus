@@ -40,11 +40,11 @@
     
     NSData * dataRotas = [NSURLConnection sendSynchronousRequest:rotasRequest returningResponse:&response error:&erro];
     
-    self.dataSourceRotas = [[NSJSONSerialization JSONObjectWithData:dataRotas options:NSJSONReadingAllowFragments error:&erro] objectForKey:@"rotas"];
+    self.dataSourceRotas = [NSJSONSerialization JSONObjectWithData:dataRotas options:NSJSONReadingAllowFragments error:&erro];
     
-    for (NSString * rota in self.dataSourceRotas) {
+    for (NSDictionary * rota in self.dataSourceRotas) {
         
-        NSString * rotasRequestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaPontosDaRota?linha=%@&rota=%@",SERVIDOR,self.numeroLinha,rota];
+        NSString * rotasRequestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaPontosDaRota?linha=%@&rota=%@",SERVIDOR,self.numeroLinha,[rota objectForKey:@"nome"]];
         NSURLRequest * rotasRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:rotasRequestString]];
         
         NSData * pontoData = [NSURLConnection sendSynchronousRequest:rotasRequest returningResponse:&response error:&erro];
@@ -76,7 +76,7 @@
 //    proximo.rotas = self.dataSourceRotas;
     NSIndexPath * indexPath = (NSIndexPath*)sender;
     proximo.pontos = [self.dataSourcePontos objectAtIndex:indexPath.section];
-    proximo.numeroLinha = self.numeroLinha;
+    proximo.numeroRota = [[self.dataSourceRotas objectAtIndex:indexPath.section] objectForKey:@"idrota"];
 }
 
 //- (void) clicou
@@ -167,7 +167,7 @@
     label.frame = CGRectMake(20, 2, 280, 21);
     label.font = [UIFont fontWithName:@"MuseoSans-700" size:18];
     label.textColor = CINZA;
-    label.text = [self.dataSourceRotas objectAtIndex:section];
+    label.text = [[self.dataSourceRotas objectAtIndex:section] objectForKey:@"nome"];
     label.backgroundColor = [UIColor clearColor];
     
     UIImageView * imageView = [UIImageView new];
