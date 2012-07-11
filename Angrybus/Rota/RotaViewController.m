@@ -24,12 +24,8 @@
 @synthesize numeroRota = _numeroRota;
 
 
-
-- (void)viewDidLoad {
-    [super viewDidLoad];
-	
-	// create the overlay
-	[self loadRoute];
+- (void) montaTela {
+    [self loadRoute];
 	
 	// add the overlay to the map
 	if (nil != self.routeLine) {
@@ -39,6 +35,28 @@
 	[self zoomInOnRoute];
     
     [self posicionaVeiculos];
+    
+    [DejalBezelActivityView removeView];
+}
+
+- (void)viewDidLoad {
+    [super viewDidLoad];
+    
+    [DejalBezelActivityView activityViewForView:self.view withLabel:@"Montando rota..."].showNetworkActivityIndicator = YES;
+    
+    [NSThread detachNewThreadSelector:@selector(montaTela) toTarget:self withObject:nil];
+	
+	// create the overlay
+//	[self loadRoute];
+//	
+//	// add the overlay to the map
+//	if (nil != self.routeLine) {
+//		[self.mapView addOverlay:self.routeLine];
+//	}
+//    
+//	[self zoomInOnRoute];
+//    
+//    [self posicionaVeiculos];
 	
 }
 

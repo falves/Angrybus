@@ -31,6 +31,8 @@
 	
     self.title = @"Todas as linhas";
     
+    [DejalActivityView activityViewForView:self.view withLabel:@"Carregando..."].showNetworkActivityIndicator = YES;
+    
     NSString * requestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaLinhas",SERVIDOR];
     NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestString]];
     [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
@@ -43,6 +45,7 @@
          
          dispatch_async(dispatch_get_main_queue(), ^{
              [tableViewLinhas reloadData];
+             [DejalActivityView removeView];
          });
          
      }];

@@ -31,30 +31,61 @@
 {
     [super viewDidLoad];
     
+    [DejalActivityView activityViewForView:self.view withLabel:@"Carregando..."].showNetworkActivityIndicator = YES;
+
+    
     self.title = [NSString stringWithFormat:@"Linha %@",self.numeroLinha];
     
     NSString * rotasRequestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaRotasDaLinha?linha=%@",SERVIDOR,self.numeroLinha];
     NSURLRequest * rotasRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:rotasRequestString]];
-    NSError * erro;
-    NSURLResponse * response;
+//    NSError * erro;
+//    NSURLResponse * response;
+//    
+//    NSData * dataRotas = [NSURLConnection sendSynchronousRequest:rotasRequest returningResponse:&response error:&erro];
+//    
+//    self.dataSourceRotas = [NSJSONSerialization JSONObjectWithData:dataRotas options:NSJSONReadingAllowFragments error:&erro];
+//    
+//    for (NSDictionary * rota in self.dataSourceRotas) {
+//        
+//        NSString * rotasRequestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaPontosDaRota?linha=%@&rota=%@",SERVIDOR,self.numeroLinha,[rota objectForKey:@"nome"]];
+//        NSURLRequest * rotasRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:rotasRequestString]];
+//        
+//        NSData * pontoData = [NSURLConnection sendSynchronousRequest:rotasRequest returningResponse:&response error:&erro];
+//        NSArray * pontosArray = [NSJSONSerialization JSONObjectWithData:pontoData options:NSJSONReadingMutableContainers error:&erro];
+//        
+//        [self.dataSourcePontos addObject:pontosArray];
+//        
+//    }
     
-    NSData * dataRotas = [NSURLConnection sendSynchronousRequest:rotasRequest returningResponse:&response error:&erro];
+    [NSURLConnection sendAsynchronousRequest:rotasRequest queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *error)
+     {
+         
+         NSError * erro;
+         
+         self.dataSourceRotas = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingAllowFragments error:&erro];
+         
+         for (NSDictionary * rota in self.dataSourceRotas) {
+             
+             NSString * rotasRequestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaPontosDaRota?linha=%@&rota=%@",SERVIDOR,self.numeroLinha,[rota objectForKey:@"nome"]];
+             NSURLRequest * rotasRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:rotasRequestString]];
+             
+             NSData * pontoData = [NSURLConnection sendSynchronousRequest:rotasRequest returningResponse:&response error:&erro];
+             NSArray * pontosArray = [NSJSONSerialization JSONObjectWithData:pontoData options:NSJSONReadingMutableContainers error:&erro];
+             
+             [self.dataSourcePontos addObject:pontosArray];
+             
+         }
+         
+         dispatch_async(dispatch_get_main_queue(), ^{
+             [tableViewPontos reloadData];
+             [DejalActivityView removeView];
+         });
+         
+     }];
     
-    self.dataSourceRotas = [NSJSONSerialization JSONObjectWithData:dataRotas options:NSJSONReadingAllowFragments error:&erro];
+//    [DejalActivityView removeView];
+//    [tableViewPontos reloadData];
     
-    for (NSDictionary * rota in self.dataSourceRotas) {
-        
-        NSString * rotasRequestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaPontosDaRota?linha=%@&rota=%@",SERVIDOR,self.numeroLinha,[rota objectForKey:@"nome"]];
-        NSURLRequest * rotasRequest = [NSURLRequest requestWithURL:[NSURL URLWithString:rotasRequestString]];
-        
-        NSData * pontoData = [NSURLConnection sendSynchronousRequest:rotasRequest returningResponse:&response error:&erro];
-        NSArray * pontosArray = [NSJSONSerialization JSONObjectWithData:pontoData options:NSJSONReadingMutableContainers error:&erro];
-        
-        [self.dataSourcePontos addObject:pontosArray];
-        
-    }
-    
-    [tableViewPontos reloadData];
 
 }
 

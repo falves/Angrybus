@@ -11,6 +11,7 @@
 #import "PlaceMark.h"
 #import "Place.h"
 #import "VeiculoAnnotation.h"
+#import "DejalActivityView.h"
 
 @interface RotaViewController : UIViewController <MKMapViewDelegate>
 {

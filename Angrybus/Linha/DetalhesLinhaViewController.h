@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CustomCell.h"
 #import "RotaViewController.h"
+#import "DejalActivityView.h"
 
 @interface DetalhesLinhaViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {

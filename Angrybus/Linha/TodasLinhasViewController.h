@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "DetalhesLinhaViewController.h"
 #import "CustomCell.h"
+#import "DejalActivityView.h"
 
 @interface TodasLinhasViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {

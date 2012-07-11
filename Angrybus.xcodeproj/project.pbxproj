@@ -8,10 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		5503C9AA1573C56A0046118E /* VeiculoAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 5503C9A91573C56A0046118E /* VeiculoAnnotation.m */; };
-		5503C9AF1573C7350046118E /* yellow_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5503C9AB1573C7350046118E /* yellow_pin.png */; };
-		5503C9B01573C7350046118E /* pink_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5503C9AC1573C7350046118E /* pink_pin.png */; };
-		5503C9B11573C7350046118E /* green_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5503C9AD1573C7350046118E /* green_pin.png */; };
-		5503C9B21573C7350046118E /* blue_pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 5503C9AE1573C7350046118E /* blue_pin.png */; };
 		554F621D15700FE900D20BE8 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554F621C15700FE900D20BE8 /* UIKit.framework */; };
 		554F621F15700FE900D20BE8 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554F621E15700FE900D20BE8 /* Foundation.framework */; };
 		554F622115700FE900D20BE8 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554F622015700FE900D20BE8 /* CoreGraphics.framework */; };
@@ -36,6 +32,7 @@
 		557C449015AB603B0041CA97 /* ponto@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 557C448C15AB603B0041CA97 /* ponto@2x.png */; };
 		557C449515AB8E790041CA97 /* onibus.png in Resources */ = {isa = PBXBuildFile; fileRef = 557C449315AB8E790041CA97 /* onibus.png */; };
 		557C449615AB8E790041CA97 /* onibus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 557C449415AB8E790041CA97 /* onibus@2x.png */; };
+		55BD7DB715ADFBA6007669E1 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BD7DB615ADFBA6007669E1 /* DejalActivityView.m */; };
 		55CD6FC415A9F0E600C896F4 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CD6FC015A9F0E600C896F4 /* libTestFlight.a */; };
 		55CD6FC515A9F0E600C896F4 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CD6FC115A9F0E600C896F4 /* README.txt */; };
 		55CD6FC615A9F0E600C896F4 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CD6FC215A9F0E600C896F4 /* release_notes.txt */; };
@@ -75,10 +72,6 @@
 /* Begin PBXFileReference section */
 		5503C9A81573C56A0046118E /* VeiculoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VeiculoAnnotation.h; sourceTree = "<group>"; };
 		5503C9A91573C56A0046118E /* VeiculoAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = VeiculoAnnotation.m; sourceTree = "<group>"; };
-		5503C9AB1573C7350046118E /* yellow_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = yellow_pin.png; sourceTree = "<group>"; };
-		5503C9AC1573C7350046118E /* pink_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pink_pin.png; sourceTree = "<group>"; };
-		5503C9AD1573C7350046118E /* green_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = green_pin.png; sourceTree = "<group>"; };
-		5503C9AE1573C7350046118E /* blue_pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = blue_pin.png; sourceTree = "<group>"; };
 		554F621815700FE900D20BE8 /* Angrybus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Angrybus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		554F621C15700FE900D20BE8 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		554F621E15700FE900D20BE8 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -114,6 +107,8 @@
 		557C448C15AB603B0041CA97 /* ponto@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "ponto@2x.png"; path = "Angrybus/Imagens/ponto@2x.png"; sourceTree = "<group>"; };
 		557C449315AB8E790041CA97 /* onibus.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = onibus.png; path = Angrybus/Imagens/onibus.png; sourceTree = "<group>"; };
 		557C449415AB8E790041CA97 /* onibus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "onibus@2x.png"; path = "Angrybus/Imagens/onibus@2x.png"; sourceTree = "<group>"; };
+		55BD7DB515ADFBA6007669E1 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
+		55BD7DB615ADFBA6007669E1 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
 		55CD6FC015A9F0E600C896F4 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		55CD6FC115A9F0E600C896F4 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		55CD6FC215A9F0E600C896F4 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
@@ -174,6 +169,7 @@
 		554F620D15700FE900D20BE8 = {
 			isa = PBXGroup;
 			children = (
+				55BD7DB415ADFB90007669E1 /* Bibliotecas */,
 				557C448915AB5AC20041CA97 /* Icon.png */,
 				557C448715AB5ABD0041CA97 /* Icon@2x.png */,
 				568C689615AAA50D003F893F /* Default@2x.png */,
@@ -227,11 +223,7 @@
 		554F622315700FE900D20BE8 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				5503C9AC1573C7350046118E /* pink_pin.png */,
-				5503C9AD1573C7350046118E /* green_pin.png */,
-				5503C9AE1573C7350046118E /* blue_pin.png */,
 				554F622415700FE900D20BE8 /* Angrybus-Info.plist */,
-				5503C9AB1573C7350046118E /* yellow_pin.png */,
 				554F622515700FE900D20BE8 /* InfoPlist.strings */,
 				554F622815700FE900D20BE8 /* main.m */,
 				554F622A15700FE900D20BE8 /* Angrybus-Prefix.pch */,
@@ -283,6 +275,15 @@
 				554F626115704B6C00D20BE8 /* RotaViewController.m */,
 			);
 			name = Rota;
+			sourceTree = "<group>";
+		};
+		55BD7DB415ADFB90007669E1 /* Bibliotecas */ = {
+			isa = PBXGroup;
+			children = (
+				55BD7DB515ADFBA6007669E1 /* DejalActivityView.h */,
+				55BD7DB615ADFBA6007669E1 /* DejalActivityView.m */,
+			);
+			name = Bibliotecas;
 			sourceTree = "<group>";
 		};
 		55CD6FBF15A9F0E600C896F4 /* TestFlightSDK1.0 */ = {
@@ -403,10 +404,6 @@
 			files = (
 				554F622715700FE900D20BE8 /* InfoPlist.strings in Resources */,
 				554F623015700FE900D20BE8 /* MainStoryboard.storyboard in Resources */,
-				5503C9AF1573C7350046118E /* yellow_pin.png in Resources */,
-				5503C9B01573C7350046118E /* pink_pin.png in Resources */,
-				5503C9B11573C7350046118E /* green_pin.png in Resources */,
-				5503C9B21573C7350046118E /* blue_pin.png in Resources */,
 				55CD6FC515A9F0E600C896F4 /* README.txt in Resources */,
 				55CD6FC615A9F0E600C896F4 /* release_notes.txt in Resources */,
 				568C686915AA8BAE003F893F /* celula.png in Resources */,
@@ -467,6 +464,7 @@
 				5503C9AA1573C56A0046118E /* VeiculoAnnotation.m in Sources */,
 				568C688615AA8CEA003F893F /* ABtabBarController.m in Sources */,
 				568C689A15AAA5F8003F893F /* CustomCell.m in Sources */,
+				55BD7DB715ADFBA6007669E1 /* DejalActivityView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -540,7 +538,7 @@
 		554F624215700FE900D20BE8 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bitix Servicos de Tecnologia da Informacao Ltda.";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Felipe Alves (8WBDK5T36X)";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Angrybus/Angrybus-Prefix.pch";
 				INFOPLIST_FILE = "Angrybus/Angrybus-Info.plist";
@@ -549,7 +547,7 @@
 					"\"$(SRCROOT)/Angrybus/TestFlightSDK1.0\"",
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F952DDA1-1904-47CB-BC71-528307C1F555";
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "D80D119A-BF70-49DC-B127-4867A428223C";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;

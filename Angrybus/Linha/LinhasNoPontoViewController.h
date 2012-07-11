@@ -9,6 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "CustomCell.h"
 #import "DetalhesLinhaViewController.h"
+#import "DejalActivityView.h"
 
 @interface LinhasNoPontoViewController : UIViewController <UITableViewDataSource, UITableViewDelegate>
 {

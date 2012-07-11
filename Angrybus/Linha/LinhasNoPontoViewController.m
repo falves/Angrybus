@@ -30,6 +30,7 @@
 //    [self.navigationController setNavigationBarHidden:NO];
     self.title = @"Linhas no ponto";
     
+    
 }
 
 - (void) viewWillDisappear:(BOOL)animated {
@@ -40,6 +41,7 @@
 {
     [super viewDidLoad];
     
+    [DejalActivityView activityViewForView:self.view withLabel:@"Carregando..."].showNetworkActivityIndicator = YES;
     
     NSString * requestString = [NSString stringWithFormat:@"%@/Angryadmin/ListaLinhasNoPonto?idponto=%@",SERVIDOR,self.idPonto];
     NSURLRequest * request = [NSURLRequest requestWithURL:[NSURL URLWithString:requestString]];
@@ -53,6 +55,7 @@
          
          dispatch_async(dispatch_get_main_queue(), ^{
              [tableViewLinhas reloadData];
+             [DejalActivityView removeView];
          });
                   
      }];
