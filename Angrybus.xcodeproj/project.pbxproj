@@ -33,6 +33,12 @@
 		557C449515AB8E790041CA97 /* onibus.png in Resources */ = {isa = PBXBuildFile; fileRef = 557C449315AB8E790041CA97 /* onibus.png */; };
 		557C449615AB8E790041CA97 /* onibus@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 557C449415AB8E790041CA97 /* onibus@2x.png */; };
 		55BD7DB715ADFBA6007669E1 /* DejalActivityView.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BD7DB615ADFBA6007669E1 /* DejalActivityView.m */; };
+		55BD7DC415AE03E6007669E1 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554F621C15700FE900D20BE8 /* UIKit.framework */; };
+		55BD7DC515AE03E6007669E1 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554F621E15700FE900D20BE8 /* Foundation.framework */; };
+		55BD7DCB15AE03E6007669E1 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 55BD7DC915AE03E6007669E1 /* InfoPlist.strings */; };
+		55BD7DCE15AE03E6007669E1 /* TestesAngybus.m in Sources */ = {isa = PBXBuildFile; fileRef = 55BD7DCD15AE03E6007669E1 /* TestesAngybus.m */; };
+		55BD7DD715AE0413007669E1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BD7DD615AE0413007669E1 /* SenTestingKit.framework */; };
+		55BD7DD815AE0432007669E1 /* SenTestingKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 55BD7DD615AE0413007669E1 /* SenTestingKit.framework */; };
 		55CD6FC415A9F0E600C896F4 /* libTestFlight.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 55CD6FC015A9F0E600C896F4 /* libTestFlight.a */; };
 		55CD6FC515A9F0E600C896F4 /* README.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CD6FC115A9F0E600C896F4 /* README.txt */; };
 		55CD6FC615A9F0E600C896F4 /* release_notes.txt in Resources */ = {isa = PBXBuildFile; fileRef = 55CD6FC215A9F0E600C896F4 /* release_notes.txt */; };
@@ -68,6 +74,16 @@
 		568C689715AAA50D003F893F /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 568C689615AAA50D003F893F /* Default@2x.png */; };
 		568C689A15AAA5F8003F893F /* CustomCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 568C689915AAA5F8003F893F /* CustomCell.m */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		55BD7DD415AE03F0007669E1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 554F620F15700FE900D20BE8 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 554F621715700FE900D20BE8;
+			remoteInfo = Angrybus;
+		};
+/* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
 		5503C9A81573C56A0046118E /* VeiculoAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = VeiculoAnnotation.h; sourceTree = "<group>"; };
@@ -109,6 +125,13 @@
 		557C449415AB8E790041CA97 /* onibus@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "onibus@2x.png"; path = "Angrybus/Imagens/onibus@2x.png"; sourceTree = "<group>"; };
 		55BD7DB515ADFBA6007669E1 /* DejalActivityView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DejalActivityView.h; sourceTree = "<group>"; };
 		55BD7DB615ADFBA6007669E1 /* DejalActivityView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DejalActivityView.m; sourceTree = "<group>"; };
+		55BD7DC115AE03E6007669E1 /* TestesAngybus.octest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TestesAngybus.octest; sourceTree = BUILT_PRODUCTS_DIR; };
+		55BD7DC815AE03E6007669E1 /* TestesAngybus-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "TestesAngybus-Info.plist"; sourceTree = "<group>"; };
+		55BD7DCA15AE03E6007669E1 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
+		55BD7DCC15AE03E6007669E1 /* TestesAngybus.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TestesAngybus.h; sourceTree = "<group>"; };
+		55BD7DCD15AE03E6007669E1 /* TestesAngybus.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TestesAngybus.m; sourceTree = "<group>"; };
+		55BD7DCF15AE03E6007669E1 /* TestesAngybus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "TestesAngybus-Prefix.pch"; sourceTree = "<group>"; };
+		55BD7DD615AE0413007669E1 /* SenTestingKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SenTestingKit.framework; path = Library/Frameworks/SenTestingKit.framework; sourceTree = DEVELOPER_DIR; };
 		55CD6FC015A9F0E600C896F4 /* libTestFlight.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libTestFlight.a; sourceTree = "<group>"; };
 		55CD6FC115A9F0E600C896F4 /* README.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = README.txt; sourceTree = "<group>"; };
 		55CD6FC215A9F0E600C896F4 /* release_notes.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = release_notes.txt; sourceTree = "<group>"; };
@@ -153,6 +176,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				55BD7DD715AE0413007669E1 /* SenTestingKit.framework in Frameworks */,
 				55CD6FC915A9F11200C896F4 /* libz.dylib in Frameworks */,
 				554F626415704DC300D20BE8 /* CoreLocation.framework in Frameworks */,
 				554F62451570136300D20BE8 /* MapKit.framework in Frameworks */,
@@ -160,6 +184,16 @@
 				554F621F15700FE900D20BE8 /* Foundation.framework in Frameworks */,
 				554F622115700FE900D20BE8 /* CoreGraphics.framework in Frameworks */,
 				55CD6FC415A9F0E600C896F4 /* libTestFlight.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		55BD7DBD15AE03E6007669E1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BD7DC415AE03E6007669E1 /* UIKit.framework in Frameworks */,
+				55BD7DC515AE03E6007669E1 /* Foundation.framework in Frameworks */,
+				55BD7DD815AE0432007669E1 /* SenTestingKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -176,6 +210,7 @@
 				568C689415AAA506003F893F /* Default.png */,
 				568C684615AA8B94003F893F /* Imagens */,
 				554F622215700FE900D20BE8 /* Angrybus */,
+				55BD7DC615AE03E6007669E1 /* TestesAngybus */,
 				554F621B15700FE900D20BE8 /* Frameworks */,
 				554F621915700FE900D20BE8 /* Products */,
 			);
@@ -185,6 +220,7 @@
 			isa = PBXGroup;
 			children = (
 				554F621815700FE900D20BE8 /* Angrybus.app */,
+				55BD7DC115AE03E6007669E1 /* TestesAngybus.octest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -192,6 +228,7 @@
 		554F621B15700FE900D20BE8 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				55BD7DD615AE0413007669E1 /* SenTestingKit.framework */,
 				55CD6FC815A9F11200C896F4 /* libz.dylib */,
 				554F626315704DC300D20BE8 /* CoreLocation.framework */,
 				554F62441570136300D20BE8 /* MapKit.framework */,
@@ -286,6 +323,26 @@
 			name = Bibliotecas;
 			sourceTree = "<group>";
 		};
+		55BD7DC615AE03E6007669E1 /* TestesAngybus */ = {
+			isa = PBXGroup;
+			children = (
+				55BD7DCC15AE03E6007669E1 /* TestesAngybus.h */,
+				55BD7DCD15AE03E6007669E1 /* TestesAngybus.m */,
+				55BD7DC715AE03E6007669E1 /* Supporting Files */,
+			);
+			path = TestesAngybus;
+			sourceTree = "<group>";
+		};
+		55BD7DC715AE03E6007669E1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				55BD7DC815AE03E6007669E1 /* TestesAngybus-Info.plist */,
+				55BD7DC915AE03E6007669E1 /* InfoPlist.strings */,
+				55BD7DCF15AE03E6007669E1 /* TestesAngybus-Prefix.pch */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
 		55CD6FBF15A9F0E600C896F4 /* TestFlightSDK1.0 */ = {
 			isa = PBXGroup;
 			children = (
@@ -372,6 +429,25 @@
 			productReference = 554F621815700FE900D20BE8 /* Angrybus.app */;
 			productType = "com.apple.product-type.application";
 		};
+		55BD7DC015AE03E6007669E1 /* TestesAngybus */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 55BD7DD215AE03E6007669E1 /* Build configuration list for PBXNativeTarget "TestesAngybus" */;
+			buildPhases = (
+				55BD7DBC15AE03E6007669E1 /* Sources */,
+				55BD7DBD15AE03E6007669E1 /* Frameworks */,
+				55BD7DBE15AE03E6007669E1 /* Resources */,
+				55BD7DBF15AE03E6007669E1 /* ShellScript */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				55BD7DD515AE03F0007669E1 /* PBXTargetDependency */,
+			);
+			name = TestesAngybus;
+			productName = TestesAngybus;
+			productReference = 55BD7DC115AE03E6007669E1 /* TestesAngybus.octest */;
+			productType = "com.apple.product-type.bundle";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -393,6 +469,7 @@
 			projectRoot = "";
 			targets = (
 				554F621715700FE900D20BE8 /* Angrybus */,
+				55BD7DC015AE03E6007669E1 /* TestesAngybus */,
 			);
 		};
 /* End PBXProject section */
@@ -445,7 +522,31 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		55BD7DBE15AE03E6007669E1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BD7DCB15AE03E6007669E1 /* InfoPlist.strings in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		55BD7DBF15AE03E6007669E1 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "# Run the unit tests in this test bundle.\n\"${SYSTEM_DEVELOPER_DIR}/Tools/RunUnitTests\"\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		554F621415700FE900D20BE8 /* Sources */ = {
@@ -468,7 +569,23 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		55BD7DBC15AE03E6007669E1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55BD7DCE15AE03E6007669E1 /* TestesAngybus.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		55BD7DD515AE03F0007669E1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 554F621715700FE900D20BE8 /* Angrybus */;
+			targetProxy = 55BD7DD415AE03F0007669E1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
 		554F622515700FE900D20BE8 /* InfoPlist.strings */ = {
@@ -485,6 +602,14 @@
 				554F622F15700FE900D20BE8 /* en */,
 			);
 			name = MainStoryboard.storyboard;
+			sourceTree = "<group>";
+		};
+		55BD7DC915AE03E6007669E1 /* InfoPlist.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				55BD7DCA15AE03E6007669E1 /* en */,
+			);
+			name = InfoPlist.strings;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -539,6 +664,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer: Felipe Alves (8WBDK5T36X)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Angrybus/Angrybus-Prefix.pch";
 				INFOPLIST_FILE = "Angrybus/Angrybus-Info.plist";
@@ -556,6 +685,10 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Bitix Servicos de Tecnologia da Informacao Ltda.";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SYSTEM_APPS_DIR)/Xcode.app/Contents/Developer/Library/Frameworks\"",
+				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "Angrybus/Angrybus-Prefix.pch";
 				INFOPLIST_FILE = "Angrybus/Angrybus-Info.plist";
@@ -566,6 +699,38 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "F952DDA1-1904-47CB-BC71-528307C1F555";
 				WRAPPER_EXTENSION = app;
+			};
+			name = Release;
+		};
+		55BD7DD015AE03E6007669E1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestesAngybus/TestesAngybus-Prefix.pch";
+				INFOPLIST_FILE = "TestesAngybus/TestesAngybus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
+			};
+			name = Debug;
+		};
+		55BD7DD115AE03E6007669E1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(DEVELOPER_LIBRARY_DIR)/Frameworks",
+				);
+				GCC_PRECOMPILE_PREFIX_HEADER = YES;
+				GCC_PREFIX_HEADER = "TestesAngybus/TestesAngybus-Prefix.pch";
+				INFOPLIST_FILE = "TestesAngybus/TestesAngybus-Info.plist";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUNDLE_LOADER)";
+				WRAPPER_EXTENSION = octest;
 			};
 			name = Release;
 		};
@@ -586,6 +751,15 @@
 			buildConfigurations = (
 				554F624215700FE900D20BE8 /* Debug */,
 				554F624315700FE900D20BE8 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		55BD7DD215AE03E6007669E1 /* Build configuration list for PBXNativeTarget "TestesAngybus" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				55BD7DD015AE03E6007669E1 /* Debug */,
+				55BD7DD115AE03E6007669E1 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
